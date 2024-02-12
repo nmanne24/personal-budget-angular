@@ -3,7 +3,7 @@
 }
 
 body {
-    font-size: 10px;
+    font-size: 18px;
     font-family: Tahoma, Arial;
 }
 
@@ -73,7 +73,7 @@ div.hero h1 {
     color: #fff;
     font-size: 4.2em;
     margin-bottom: 20px;
-    /* A11y change */
+    /* This is an A11y change */
     font-family: Arial, sans-serif;
 }
 
@@ -113,6 +113,8 @@ body.high-contrast {
     background-color: #000;
     color: #fff;
 }
+
+
 
 @media screen and (min-width: 768px) {
     .container .div.text-box {

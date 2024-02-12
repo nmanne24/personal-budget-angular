@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nmanne24/personal-budget.git"
+    "url": "git+https://github.com/SawaniIngale/personal-budget.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nmanne24/personal-budget/issues"
+    "url": "https://github.com/SawaniIngale/personal-budget/issues"
   },
-  "homepage": "https://github.com/nmanne24/personal-budget#readme",
+  "homepage": "https://github.com/SawaniIngale/personal-budget#readme",
   "dependencies": {
     "express": "^4.18.2"
   }

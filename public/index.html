@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Budget</title>
-    <!-- SEO change -->
+    <!-- This is an SEO change -->
     <meta name="description" content="The personal budgeting app helps you to manage the expenses by providing various functionalities like tracking, sending alerts." >
-<!--SEO change -->
+<!--This is an SEO change -->
     <meta name="robots" content="index,follow">
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-<!-- A11y Change -->
+<!-- This is an A11y Change -->
     <nav class="menu">
         <ul>
-            <!-- SEO change -->
+            <!-- This is an SEO change -->
             <li><a href="/" title="Home page to tell briefly about the app">Homepage</a></li>
             <li><a href="/about.html" title="Get to know more about the app">About</a></li>
             <li><a href="/login.html" title="Log in to access all the services">Login</a></li>
             <li><a href="https://google.com" title="Direct link to Google page">Google</a></li>
         </ul>
     </nav>
-<!-- Semantic HTML change -->
+<!-- This is a Semantic HTML change -->
 <header>
     <div class="hero">
         <h1>Personal Budget</h1>
@@ -30,7 +30,7 @@
     </div>
 </header>
     <div class="container center">
-<!-- Semantic HTML change -->
+<!-- This is a Semantic HTML change -->
         <section>
             <div class="page-area">
 
@@ -105,24 +105,13 @@
         </section>
 
     </div>
-    <!-- A11y Change -->
-    <button id="contrast-mode">High Contrast Mode</button>
-    <script>
-        // JavaScript to toggle high contrast mode
-        const tb = document.getElementById('contrast-mode');
-        const body = document.body;
-
-        tb.addEventListener('click', () => {
-            body.classList.toggle('high-contrast');
-        });
-    </script>
-<!--Semantic HTML Change-->
+    
+<!--This is a Semantic HTML Change-->
     
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js" integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script>
        var dataSource = {
@@ -248,7 +237,7 @@
             .text(function(d) {
                 return d.data.label;
             });
-
+        
         function midAngle(d){
             return d.startAngle + (d.endAngle - d.startAngle)/2;
         }
@@ -282,7 +271,7 @@
 
         var polyline = svg.select(".lines").selectAll("polyline")
             .data(pie(data), key);
-
+        
         polyline.enter()
             .append("polyline");
 
@@ -298,10 +287,11 @@
                     return [arc.centroid(d2), outerArc.centroid(d2), pos];
                 };			
             });
-
+        
         polyline.exit()
             .remove();
     };
+
     </script>
     <footer>
         <div class="bottom">
