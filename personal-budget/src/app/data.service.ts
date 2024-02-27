@@ -1,35 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  public dataSource : any = {
-    datasets: [
-        {
-            data: [],
-            backgroundColor: [
-                '#ffcd56',
-                '#ff6384',
-                '#36a2eb',
-                '#fd6b19',
-                '#33FFAF',
-                '#FF3339',
-            ]
-    }
-    ],
-      labels: []
-  };
+  private data: any;
 
-  constructor(private http: HttpClient) {}
-  // ngOnInit(): void {
-  generateData(){
-    if(this.dataSource.datasets[0].data.length === 0){
-      return this.http.get('http://localhost:3000/budget');
-    }else{
-      return of(this.dataSource);
-    }
+  constructor(private http: HttpClient) {
+    this.data = null;
   }
+
+  fetchData(): Observable<any> {
+    if (this.data !== null) {
+      return of(this.data);
+    } else {
+    return this.http.get('http://localhost:3000/budget').pipe(tap((res) => {
+      this.data = res;
+    })
+    );
+}}
+
+getData(): any {
+  return this.data;
+}
 }

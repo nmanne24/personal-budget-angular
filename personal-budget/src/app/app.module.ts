@@ -1,4 +1,4 @@
-import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,11 +11,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ArticleComponent } from './article/article.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
-import { P404Component } from './p404/p404.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ContactComponent } from './contact/contact.component';
-import { D3jsComponent } from './d3js/d3js.component';
-// import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 @NgModule({
   declarations: [
@@ -27,18 +24,15 @@ import { D3jsComponent } from './d3js/d3js.component';
     ArticleComponent,
     AboutComponent,
     LoginComponent,
-    P404Component,
     BreadcrumbsComponent,
-    ContactComponent,
-    D3jsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
